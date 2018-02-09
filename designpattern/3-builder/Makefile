@@ -1,0 +1,6 @@
+LOCAL_SRC_FILES=  *.cpp
+
+TARGET := builder
+
+${TARGET}:${LOCAL_SRC_FILES}
+	g++ -o ${TARGET} ${LOCAL_SRC_FILES}

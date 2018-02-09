@@ -1,0 +1,6 @@
+LOCAL_SRC_FILES=  *.cpp
+
+TARGET := singleton
+
+${TARGET}:${LOCAL_SRC_FILES}
+	g++ -o ${TARGET} ${LOCAL_SRC_FILES}

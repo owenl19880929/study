@@ -1,0 +1,6 @@
+LOCAL_SRC_FILES=  ./src/*.cpp
+LOCAL_CPP_INCLUDE=  ./include
+TARGET := template
+
+${TARGET}:${LOCAL_SRC_FILES}
+	g++ -o ${TARGET} ${LOCAL_SRC_FILES} -I ${LOCAL_CPP_INCLUDE}
