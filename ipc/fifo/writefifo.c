@@ -36,12 +36,12 @@ int main(int argc, char** atgv)
   }
 
   char writeBuf[WRITE_BUFF_LEN];
-  while(1)
+  while(strncmp(writeBuf, "close", strlen("close")))
   { 
       memset(writeBuf, 0, WRITE_BUFF_LEN);
       printf("Please input something:\n");
       scanf("%s", writeBuf);
-      writeLen = write(fd, writeBuf, sizeof(writeBuf));
+      writeLen = write(fd, writeBuf, strlen(writeBuf));
       printf("FIFO TEST: pid-->%d,  write-->%s, length-->%d\n", pid, writeBuf, writeLen);
   } 
   

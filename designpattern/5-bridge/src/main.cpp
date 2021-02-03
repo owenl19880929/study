@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Abstraction.h"
-#include "RefinedAbstractionA.h"
-#include "RefinedAbstractionB.h"
+#include "RefinedAbstraction.h"
+
 #include "AbstractionImplement.h"
 #include "ConcreatAbstractionImplementA.h"
 #include "ConcreatAbstractionImplementB.h"
@@ -14,7 +14,7 @@ int main(int argc, char** argv)
     Abstraction* abstraction;
     
     abstractionimpl = new ConcreatAbstractionImplementA();
-    abstraction = new RefinedAbstractionA(*abstractionimpl);
+    abstraction = new RefinedAbstraction(*abstractionimpl);
     abstraction->Operation1();
 
     delete abstractionimpl;
@@ -23,32 +23,13 @@ int main(int argc, char** argv)
     abstraction = NULL;
 
     abstractionimpl = new ConcreatAbstractionImplementB();
-    abstraction = new RefinedAbstractionA(*abstractionimpl);
+    abstraction = new RefinedAbstraction(*abstractionimpl);
     abstraction->Operation1();
 
     delete abstractionimpl;
     abstractionimpl = NULL;
     delete abstraction;
     abstraction = NULL;
-
-    abstractionimpl = new ConcreatAbstractionImplementA();
-    abstraction = new RefinedAbstractionB(*abstractionimpl);
-    abstraction->Operation1();
-
-    delete abstractionimpl;
-    abstractionimpl = NULL;
-    delete abstraction;
-    abstraction = NULL;
-
-    abstractionimpl = new ConcreatAbstractionImplementB();
-    abstraction = new RefinedAbstractionB(*abstractionimpl);
-    abstraction->Operation1();
-
-    delete abstractionimpl;
-    abstractionimpl = NULL;
-    delete abstraction;
-    abstraction = NULL;
-
 }
 
 

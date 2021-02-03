@@ -10,15 +10,15 @@
 //
 
 #include<iostream>
-#include "RefinedAbstractionA.h"
+#include "RefinedAbstraction.h"
 
 using namespace std;
 
-RefinedAbstractionA::RefinedAbstractionA(AbstractionImplement& impl) {
+RefinedAbstraction::RefinedAbstraction(AbstractionImplement& impl) {
     this->_impl = &impl;
 }
 
-void RefinedAbstractionA::Operation1() {
+void RefinedAbstraction::Operation1() {
     cout<<"RefinedAbstractionA Operation1"<<endl;
     _impl->Operation1();
 }

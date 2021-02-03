@@ -28,7 +28,7 @@ int main(int argc, char** atgv)
   char readBuf[READ_BUFF_LEN];
   int readLen = 0;
   
-  while(1)
+  while(strncmp(readBuf, "close", strlen("close")))
   { 
     memset(readBuf, 0, READ_BUFF_LEN);
     readLen = read(fd, readBuf, READ_BUFF_LEN);

@@ -16,9 +16,9 @@
 #include "Abstraction.h"
 #include "AbstractionImplement.h"
 
-class RefinedAbstractionA : public Abstraction {
+class RefinedAbstraction : public Abstraction {
 public:
-    RefinedAbstractionA(AbstractionImplement& impl);
+    RefinedAbstraction(AbstractionImplement& impl);
     void Operation1();
 
 private:
